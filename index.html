@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="stepForm.css">
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sidebar start -->
+<img class="backgroundImageMobile" src="assets/images/bg-sidebar-mobile.svg" alt="background">
+<div class="wrapper">
+
+    <img class="backgroundImageDesktop" src="assets/images/bg-sidebar-desktop.svg" alt="background">
+
+    <div class="sidebar">
+
+        <div class="sidebarChild">
+            <a class="circleNumeration activeCircle" href="#">1</a>
+            <div class="sidebarTextWrapper">
+                <p class="sidebarText">Step 1</p>
+                <p class="sidebarTitle">Your info</p>
+            </div>
+        </div>
+
+        <div class="sidebarChild">
+            <a class="circleNumeration" href="#">2</a>
+            <div class="sidebarTextWrapper">
+                <p class="sidebarText">Step 2</p>
+                <p class="sidebarTitle">Select plan</p>
+            </div>
+        </div>
+
+        <div class="sidebarChild">
+            <a class="circleNumeration" href="#">3</a>
+            <div class="sidebarTextWrapper">
+                <p class="sidebarText">Step 3</p>
+                <p class="sidebarTitle">Add-ons</p>
+            </div>
+        </div>
+
+        <div class="sidebarChild">
+            <a class="circleNumeration" href="#">4</a>
+            <div class="sidebarTextWrapper">
+                <p class="sidebarText">Step 4</p>
+                <p class="sidebarTitle">Summary</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Sidebar end -->
+
+
+    <!-- Step 1 start -->
+
+    <div class="stepWrapper">
+
+        <h1 class="stepTitle">Personal info</h1>
+        <p class="stepDescription">Please provide your name, email address, and phone number.</p>
+
+        <div class="inputWrapper">
+            <div class="inputChild">
+                <div class="invalidText hidden">This field is required</div>
+                <label class="labelText" for="name">Name</label>
+                <input class="input" id="name" placeholder="e.g. Stephen King" required>
+            </div>
+
+            <div class="inputChild">
+                <div class="invalidText hidden">This field is required</div>
+                <label class="labelText" for="email">Email Address</label>
+                <input class="input" id="email" type="email" placeholder="e.g. stephenking@lorem.com" required>
+            </div>
+
+            <div class="inputChild">
+                <div class="invalidText hidden">This field is required</div>
+                <label class="labelText" for="phone">Phone Number</label>
+                <input class="input" type="tel" pattern="[+]?[0-9]{9}||[+]?[0-9]{10}" id="phone"
+                       placeholder="e.g. +1 234 567 890" required>
+            </div>
+        </div>
+
+        <div class="nextButtonMobile">
+            <div class="previousButton ninja">Go Back</div>
+            <div class="nextButton">Next Step</div>
+        </div>
+
+    </div>
+
+
+    <!-- Step 1 end -->
+
+
+    <!-- Step 2 start -->
+    <div class="stepWrapper">
+        <h1 class="stepTitle">Select your plan</h1>
+        <p class="stepDescription">You have the option of monthly or yearly billing.</p>
+
+        <div class="selectPlanWrapper">
+            <div class="selectPlanChild selectedPlan">
+                <div class="selectPlanImg"><img src="assets/images/icon-arcade.svg" alt="arcade"></div>
+                <div class="selectPlanTextWrapper">
+                    <p class="selectPlanOption">Arcade</p>
+                    <p class="planPrice priceToggleArcade">$9/mo</p>
+                    <p class="yearly">2 months free</p>
+                </div>
+            </div>
+
+            <div class="selectPlanChild">
+                <div class="selectPlanImg"><img src="assets/images/icon-advanced.svg" alt="advanced"></div>
+                <div class="selectPlanTextWrapper">
+                    <p class="selectPlanOption">Advanced</p>
+                    <p class="planPrice priceToggleAdvanced">$12/mo</p>
+                    <p class="yearly">2 months free</p>
+                </div>
+            </div>
+
+            <div class="selectPlanChild">
+                <div class="selectPlanImg"><img src="assets/images/icon-pro.svg" alt="pro"></div>
+                <div class="selectPlanTextWrapper">
+                    <p class="selectPlanOption">Pro</p>
+                    <p class="planPrice priceTogglePro">$15/mo</p>
+                    <p class="yearly">2 months free</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="toggleContainer">
+            <span class="toggleText toggleOn">Monthly</span>
+            <label><input type="checkbox" class="switch"></label>
+            <span class="toggleText">Yearly</span>
+        </div>
+
+        <div class="nextButtonMobile">
+            <div class="previousButton">Go Back</div>
+            <div class="nextButton">Next Step</div>
+        </div>
+
+    </div>
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    <div class="stepWrapper">
+        <h1 class="stepTitle">Pick add-ons</h1>
+        <p class="stepDescription">Add-ons help enhance your gaming experience.</p>
+
+        <div class="addonsWrapper">
+            <div class="addonsChild">
+                <label class="checkboxContainer">
+                    <input type="checkbox">
+                    <span class="checkbox"></span>
+                </label>
+                <div>
+                    <p class="addonsTitle">Online service</p>
+                    <p class="addonsDescription">Access to multiplayer games</p>
+                </div>
+                <p class="addonsPrice addonsPriceOne">+$1/mo</p>
+            </div>
+
+            <div class="addonsChild">
+                <label class="checkboxContainer">
+                    <input type="checkbox">
+                    <span class="checkbox"></span>
+                </label>
+                <div>
+                    <p class="addonsTitle">Larger storage</p>
+                    <p class="addonsDescription">Extra 1TB of cloud save</p>
+                </div>
+                <p class="addonsPrice addonsPriceTwo">+$2/mo</p>
+            </div>
+
+            <div class="addonsChild">
+                <label class="checkboxContainer">
+                    <input type="checkbox">
+                    <span class="checkbox"></span>
+                </label>
+                <div>
+                    <p class="addonsTitle">Customizable profile</p>
+                    <p class="addonsDescription">Custom theme on your profile</p>
+                </div>
+                <p class="addonsPrice addonsPriceThree">+$2/mo</p>
+            </div>
+        </div>
+
+        <div class="nextButtonMobile">
+            <div class="previousButton">Go Back</div>
+            <div class="nextButton">Next Step</div>
+        </div>
+
+    </div>
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+    <div class="stepWrapper">
+        <h1 class="stepTitle">Finishing up</h1>
+        <p class="stepDescription">Double-check everything looks OK before confirming.</p>
+
+        <div class="finishWrapper">
+
+            <div class="summaryPlanContainer">
+                <p class="summaryPlan">TEST (TEST)</p>
+                <p class="changeButton">Change</p>
+                <p class="summaryPlanPrice">$9/mo</p>
+            </div>
+
+            <hr>
+
+            <div class="summaryAddonsContainer">
+                <p class="chosenAddon">Online service<span class="chosenAddonPrice">+$1/mo</span></p>
+                <p class="chosenAddon">Larger storage<span class="chosenAddonPrice">+$1/mo</span></p>
+                <p class="chosenAddon">Customizable profile<span class="chosenAddonPrice">+$1/mo</span></p>
+            </div>
+        </div>
+
+        <p class="summaryTotal">Total (per month/year)<span class="summaryTotalPrice">+$0/mo</span></p>
+
+        <div class="nextButtonMobile">
+            <div class="previousButton">Go Back</div>
+            <div class="nextButton confirmButton">Confirm</div>
+        </div>
+
+    </div>
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+    <div class="stepWrapper">
+        <div class="thankYou">
+
+            <div>
+                <img class="thankYouImg" src="assets/images/icon-thank-you.svg" alt="thanks">
+            </div>
+
+            <h1 class="stepTitle">Thank you!</h1>
+
+            <p class="stepDescription thankYouText">Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.</p>
+
+        </div>
+    </div>
+    <!-- Step 5 end -->
+</div>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/BartoszPie">Bartosz Pietrus</a>.
+</div>
+</body>
+<script src="stepForm.js"></script>
+</html>
