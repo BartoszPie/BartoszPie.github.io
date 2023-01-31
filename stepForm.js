@@ -13,7 +13,7 @@ const chosenAddonPrice = document.querySelectorAll(`.chosenAddonPrice`);
 const chosenAddon = document.querySelectorAll(`.chosenAddon`);
 
 
-let currentStep = 2;
+let currentStep = 0;
 let validate = false;
 const regEx = /^\+?[1-9]\d{1,14}$/;
 
