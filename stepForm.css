@@ -28,6 +28,7 @@ body {
 
 .sidebar {
     position: absolute;
+    top: 0;
     margin: 3% 2%;
     width: 25%;
     display: flex;
